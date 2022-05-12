@@ -1,0 +1,40 @@
+
+.board{
+    background: linear-gradient(#B7D6C7, #FFFFFF);
+    width: fit;
+    height: 400px;
+    margin: 3rem 3rem 3rem 3rem;
+    position: relative;
+}
+.dino{
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    bottom: 40px;
+    margin-left: 20%;
+}
+.dino img{
+    width: 100%;
+    height: auto;
+}
+.suelo{
+    width: 100%;
+    height: 43px;
+    position: absolute;
+    bottom: 0px;
+}
+.suelo img{
+    width: 100%;
+    
+}
+.dino-jump{
+    animation: dinoJump 1s linear;
+}
+@keyframes dinoJump{
+    0%{
+        bottom: 43px;
+    }
+    45%, 55%{
+        bottom: 200px;
+    }
+}
