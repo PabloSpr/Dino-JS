@@ -1,49 +1,61 @@
 
 .board{
     background: linear-gradient(#B7D6C7, #FFFFFF);
-    width: 1200px;
+    /* al ancho lo define el ancho de la imagen */
+    width: 1280px; 
     height: 400px;
     margin: auto ;
     position: relative;
     overflow: hidden;
 }
 .dino{
-    width: 90px;
-    height: 90px;
+    width: 84px;
+    height: 84px;
     position: absolute;
-    bottom: 40px;
+    bottom: 35px;
     margin-left: 20%;
+    background:url("./img/dino.png") repeat-x 0px 0px;
 }
-.dino img{
-    width: 100%;
-    height: auto;
-}
+
 .suelo{
-    width: 2400px;
+    width: 2560px;
     height: 43px;
     position: absolute;
     bottom: 0;
-    left: 0;
+    left: 0; 
     background: url("./img/suelo.png") repeat-x;
     animation: backgroundMove 3s linear infinite;
 }
 
 .dino-jump{
     animation: dinoJump 1s linear;
+ }
+.dino-corre{
+    animation: dinoCorre 0.25s steps(2) infinite;
 }
+
 @keyframes dinoJump{
     0%{
-        bottom: 43px;
+        bottom: 35px;
     }
     45%, 55%{
         bottom: 200px;
     }
 }
+@keyframes dinoCorre {
+    from{
+        background-position-x: -84px;
+    }
+    to{
+        background-position-x: -252px ;
+    }
+}
+
 @keyframes backgroundMove {
     0%{
         transform: translate(0);
     }
     100%{
-        transform: translate(-1200px);
+        transform: translate(-1280px);
     }
 }
