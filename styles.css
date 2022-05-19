@@ -49,6 +49,8 @@
     width: 50px;
     height: 100px;
     right: 0;
+}
+.cactus-mov{
     animation: cactusMove 3s linear infinite;
 }
 .cactus img{
@@ -89,4 +91,43 @@
     100%{
         right: 100%;
     }
+}
+
+.menu{
+    display: flex;
+    justify-content:space-around;
+    align-items: center ww;
+    padding-top: 2rem;
+}
+
+.button.play {
+    border-style: solid;
+    border-width: 37px 0px 37px 60px;
+}
+
+.button {
+    border: 0;
+    background: transparent;
+    box-sizing: border-box;
+    width: 0;
+    height: 74px;
+    border-color: transparent transparent transparent #202020;
+    transition: 1000ms all ease;
+    cursor: pointer;
+    border-style: double;
+    border-width: 0px 0px 0px 60px;
+}
+
+.button:hover {
+    border-color: transparent transparent transparent #404040;
+}
+.restart{
+    background-color: #202020;
+    border-radius: 5%;
+    border: none;
+    color:#727171;
+    cursor: pointer;
+    height: 3rem;
+    width: 10rem;
+    
 }

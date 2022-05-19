@@ -10,11 +10,16 @@
   <body>
     <div class="board">
       <div class="puntaje">Score: <span id="puntos">0</span></div>
-      <div class="suelo"></div>
-      <div class="cactus">
+      <div id="suelo" class="suelo"></div>
+      <div id="cactus" class="cactus cactus-mov">
         <img src="./img/cactus1.png" alt="" />
       </div>
       <div id="dino" class="dino"></div>
+    </div>
+    <div class="menu">
+      <button id="restart" class="restart">Restart Game</button>
+      <button id="buttonPlayStop" class="button"></button>
+      <button id="pressW" class="restart">Press "W" to jump</button>
     </div>
 
     <script src="./scripts.js"></script>
