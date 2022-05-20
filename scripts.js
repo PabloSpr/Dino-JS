@@ -151,5 +151,4 @@ function gameOver() {
 
 window.addEventListener("load", () => {
   restartGame();
-  pausarJuego();
 });
