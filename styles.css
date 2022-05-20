@@ -1,8 +1,7 @@
 
 .board{
     background: linear-gradient(#f0a753, #FFFFFF);
-    /* al ancho lo define el ancho de la imagen */
-    width: 1280px; 
+    width: 90%; 
     height: 400px;
     margin: auto ;
     position: relative;
@@ -28,7 +27,7 @@
 }
 
 .suelo{
-    width: 2560px;
+    width: 3840px;
     height: 43px;
     position: absolute;
     bottom: 0;
@@ -63,7 +62,7 @@
     0%{
         bottom: 35px;
     }
-    45%, 55%{
+    44%, 55%{
         bottom: 200px;
     }
 }
@@ -96,8 +95,8 @@
 
 .menu{
     display: flex;
-    justify-content:space-around;
-    align-items: center ww;
+    justify-content:space-evenly;
+    align-items: center;
     padding-top: 2rem;
 }
 
@@ -112,7 +111,7 @@
     box-sizing: border-box;
     width: 0;
     height: 74px;
-    border-color: transparent transparent transparent #202020;
+    border-color: transparent transparent transparent black;
     transition: 1000ms all ease;
     cursor: pointer;
     border-style: double;
@@ -123,14 +122,18 @@
     border-color: transparent transparent transparent #404040;
 }
 .restart{
-    background-color: #202020;
+    background-color: black;
     border-radius: 5%;
     border: none;
     color:#727171;
     cursor: pointer;
     height: 3rem;
     width: 10rem;
-    
+    transition: 1000ms all ease;
+}
+.restart:hover {
+    background-color: #727171;
+    color:black;
 }
 
 .nube{
@@ -141,7 +144,7 @@
 .nube2{
     position: absolute;
     right: -95px;
-    margin-top: 5rem;
+    margin-top: 6rem;
 }
 .nube-mov{
     animation:  nubeMove 6s linear infinite;;
@@ -159,7 +162,31 @@
 }
 body{
     background: url("./img/TA6BrLeqi.jpg");
-    width: 100%;
-    height: auto;
+    background-repeat: no-repeat;
+   
     background-size: cover;
+    overflow-x: hidden;
+    viewport-fit: 100%;
+}
+.contenedor{
+    padding: 2rem;
+}
+
+.crash{
+    position: absolute;
+    z-index: 10;
+    width: 190px;
+    height: auto;
+    left: 20%;
+    bottom: 5%;
+}
+
+.texto{
+    font-size: 2rem;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+   
+}
+.show{
+    display: none;
 }

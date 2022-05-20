@@ -8,25 +8,30 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <div class="board">
-      <div class="puntaje">Score: <span id="puntos">0</span></div>
-      <div class="nube nube-mov" id="nube">
-        <img src="./img/nube.png" alt="nube" />
-      </div>
-      <div class="nube2 nube-mov2" id="nube2">
-        <img src="./img/nube.png" alt="nube" />
-      </div>
+    <div class="contenedor">
+      <div id="board" class="board">
+        <div class="puntaje">Score: <span id="puntos">0</span></div>
+        <div class="nube nube-mov" id="nube">
+          <img src="./img/nube.png" alt="nube" />
+        </div>
+        <div class="nube2 nube-mov2" id="nube2">
+          <img src="./img/nube.png" alt="nube" />
+        </div>
 
-      <div id="suelo" class="suelo"></div>
-      <div id="cactus" class="cactus cactus-mov">
-        <img src="./img/cactus1.png" alt="cactus" />
+        <div id="suelo" class="suelo"></div>
+        <div id="cactus" class="cactus cactus-mov">
+          <img id="cactus-png" src="./img/cactus1.png" alt="cactus" />
+        </div>
+        <div id="dino" class="dino"></div>
+        <div id="gameOver" class="show texto">
+          <h1>Game Over</h1>
+        </div>
       </div>
-      <div id="dino" class="dino"></div>
-    </div>
-    <div class="menu">
-      <button id="restart" class="restart">Restart Game</button>
-      <button id="buttonPlayStop" class="button"></button>
-      <button id="pressW" class="restart">Press "W" to jump</button>
+      <div class="menu">
+        <button id="restart" class="restart">Restart Game</button>
+        <button id="buttonPlayStop" class="button"></button>
+        <button id="pressW" class="restart">Press "W" to jump</button>
+      </div>
     </div>
 
     <script src="./scripts.js"></script>
