@@ -4,7 +4,7 @@ const suelo = document.getElementById("suelo");
 const nube = document.getElementById("nube");
 const nube2 = document.getElementById("nube2");
 const buttonPlayStop = document.getElementById("buttonPlayStop");
-const buttonJump = document.getElementById("pressW");
+const buttonJump = document.getElementById("jumpButton");
 const restart = document.getElementById("restart");
 let correr = true;
 let score = 0;
@@ -83,8 +83,10 @@ function reanudarScore() {
 
 buttonPlayStop.addEventListener("click", () => {
   if (buttonPlayStop.classList.contains("play")) {
+    buttonPlayStop.innerText = "Pause";
     reanudarJuego();
   } else {
+    buttonPlayStop.innerText = "Play";
     pausarJuego();
   }
   buttonPlayStop.classList.toggle("play");
@@ -104,6 +106,7 @@ function restartGame() {
   resetearAnimaciones();
   if (buttonPlayStop.classList.contains("play")) {
     buttonPlayStop.classList.toggle("play");
+    buttonPlayStop.innerText = "Pause";
     reanudarJuego();
   } else {
     reanudarJuego();
@@ -122,8 +125,10 @@ function resetearAnimaciones() {
   void nube2.offsetWidth;
   nube2.classList.add("nube-mov2");
   cactus.classList.remove("crash");
-  document.getElementById("cactus-png").src = "./img/cactus1.png";
-  document.getElementById("gameOver").classList.add("show");
+  document.getElementById("cactus-png").classList.remove("hide");
+  document.getElementById("crash-png").classList.add("hide");
+  document.getElementById("gameOver").classList.add("hide");
+  buttonPlayStop.disabled = false;
 }
 
 //------------------------------------------------------
@@ -134,19 +139,20 @@ function chocar() {
     cactus.offsetLeft > player.offsetLeft &&
     player.offsetTop >= cactus.offsetTop - player.offsetHeight
   ) {
+    buttonPlayStop.disabled = true;
     gameOver();
   }
   gameLoop = requestAnimationFrame(chocar);
 }
 
 function gameOver() {
+  document.getElementById("cactus-png").classList.add("hide");
+  document.getElementById("crash-png").classList.remove("hide");
   cactus.classList.add("crash");
-  document.getElementById("cactus-png").src =
-    "./img/5f54a748cce59c0004901d11.png";
   pausarJuego();
   cancelAnimationFrame(gameLoop);
 
-  document.getElementById("gameOver").classList.remove("show");
+  document.getElementById("gameOver").classList.remove("hide");
 }
 
 window.addEventListener("load", () => {

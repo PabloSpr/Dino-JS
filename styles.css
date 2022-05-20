@@ -100,28 +100,7 @@
     padding-top: 2rem;
 }
 
-.button.play {
-    border-style: solid;
-    border-width: 37px 0px 37px 60px;
-}
-
-.button {
-    border: 0;
-    background: transparent;
-    box-sizing: border-box;
-    width: 0;
-    height: 74px;
-    border-color: transparent transparent transparent black;
-    transition: 1000ms all ease;
-    cursor: pointer;
-    border-style: double;
-    border-width: 0px 0px 0px 60px;
-}
-
-.button:hover {
-    border-color: transparent transparent transparent #404040;
-}
-.restart{
+.boton{
     background-color: black;
     border-radius: 5%;
     border: none;
@@ -131,7 +110,7 @@
     width: 10rem;
     transition: 1000ms all ease;
 }
-.restart:hover {
+.boton:hover {
     background-color: #727171;
     color:black;
 }
@@ -163,9 +142,10 @@
 body{
     background: url("./img/TA6BrLeqi.jpg");
     background-repeat: no-repeat;
-   
+    height: 100vh;
     background-size: cover;
     overflow-x: hidden;
+    overflow-y: hidden;
     viewport-fit: 100%;
 }
 .contenedor{
@@ -187,6 +167,6 @@ body{
     text-align: center;
    
 }
-.show{
+.hide{
     display: none;
 }
