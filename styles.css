@@ -1,12 +1,13 @@
 
 .board{
-    background: linear-gradient(#B7D6C7, #FFFFFF);
+    background: linear-gradient(#f0a753, #FFFFFF);
     /* al ancho lo define el ancho de la imagen */
     width: 1280px; 
     height: 400px;
     margin: auto ;
     position: relative;
     overflow: hidden;
+    margin-top: 3rem;
 }
 .puntaje{
     margin-right: 1rem;
@@ -130,4 +131,35 @@
     height: 3rem;
     width: 10rem;
     
+}
+
+.nube{
+    position: absolute;
+    right: -95px;
+    margin-top: 1rem;
+}
+.nube2{
+    position: absolute;
+    right: -95px;
+    margin-top: 5rem;
+}
+.nube-mov{
+    animation:  nubeMove 6s linear infinite;;
+}
+.nube-mov2{
+    animation:  nubeMove 5.5s linear infinite;;
+}
+@keyframes nubeMove {
+    0%{
+        right: 0%;
+    }
+    100%{
+        right: 100%;
+    }
+}
+body{
+    background: url("./img/TA6BrLeqi.jpg");
+    width: 100%;
+    height: auto;
+    background-size: cover;
 }
